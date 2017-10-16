@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_overlay_background">
+
+    <LinearLayout
+        android:id="@+id/row_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logo" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="24dp"
+            android:text="title"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/text_blue" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_title">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工程"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/text_blue" />
+
+            <TextView
+                android:id="@+id/text_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="value"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/text_black" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="部位"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/text_blue" />
+
+            <TextView
+                android:id="@+id/text_part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="value"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/text_black" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日期"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/text_blue" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="value"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/text_black" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

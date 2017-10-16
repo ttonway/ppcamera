@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:dialogTitle="输入标题："
+        android:key="overlay.title"
+        android:summary=""
+        android:title="标题" >
+    </EditTextPreference>
+    <EditTextPreference
+        android:dialogTitle="输入工程名："
+        android:key="overlay.project"
+        android:summary=""
+        android:title="工程" >
+    </EditTextPreference>
+    <EditTextPreference
+        android:dialogTitle="输入部位名称："
+        android:key="overlay.partment"
+        android:summary=""
+        android:title="部位" >
+    </EditTextPreference>
+</PreferenceScreen>

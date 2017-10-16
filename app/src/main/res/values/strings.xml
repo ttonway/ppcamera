@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PP照相机</string>
+
+    <string name="flash_mode_auto">自动</string>
+    <string name="flash_mode_on">打开</string>
+    <string name="flash_mode_off">关闭</string>
+
+</resources>

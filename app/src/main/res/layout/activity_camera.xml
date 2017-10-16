@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070707"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:weightSum="4">
+
+        <com.ttonway.ppcamera.widget.OrientationImageButton
+            android:id="@+id/btn_flash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@drawable/ic_flash_on" />
+
+        <RadioGroup
+            android:id="@+id/flash_mode_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/mode_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:padding="8dp"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/radio_mode_textcolor"
+                android:text="@string/flash_mode_auto"/>
+            <RadioButton
+                android:id="@+id/mode_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:padding="8dp"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/radio_mode_textcolor"
+                android:text="@string/flash_mode_on"/>
+            <RadioButton
+                android:id="@+id/mode_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:padding="8dp"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/radio_mode_textcolor"
+                android:text="@string/flash_mode_off"/>
+        </RadioGroup>
+
+        <com.ttonway.ppcamera.widget.OrientationImageButton
+            android:id="@+id/btn_space"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="4dp" />
+
+        <com.ttonway.ppcamera.widget.OrientationImageButton
+            android:id="@+id/btn_grid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@drawable/ic_grid" />
+
+        <com.ttonway.ppcamera.widget.OrientationImageButton
+            android:id="@+id/btn_camera_face"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@drawable/ic_switch_camera" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <com.ttonway.ppcamera.widget.OrientationImageButton
+            android:id="@+id/btn_gallery"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="#fff" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_capture_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/capture_photo_button"
+            android:minWidth="0dp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.ttonway.ppcamera.widget.SquareCameraPreview
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/overlay_view"
+            layout="@layout/text_overlay"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.ttonway.ppcamera.widget.CameraGrid
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ttonway.ppcamera.widget.FocusRectangle
+            android:id="@+id/focus_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imageViewPreview"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:padding="1dp"
+        android:visibility="invisible"/>
+</RelativeLayout>
